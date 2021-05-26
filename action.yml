@@ -78,8 +78,6 @@ runs:
         excludedLabels="${{ inputs.excludedLabels }}"
 
         # escape the space character in the labels comma separated string
-        labels=${labels//' '/'\ '}
-        excludedLabels=${excludedLabels//' '/'\ '}
 
         command=""
         
