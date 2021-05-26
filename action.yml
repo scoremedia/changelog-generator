@@ -153,6 +153,8 @@ runs:
 
         command+=" --log-console"
 
+        echo "command is $command"
+
         changelog=$(${{ github.action_path }}/changelog generate $command | base64)
 
         echo "::set-output name=changelog::$changelog"
