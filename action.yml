@@ -153,6 +153,8 @@ runs:
 
         command+=("--log-console")
 
+        echo "command is ${command[@]}"
+
         changelog=$("${command[@]}" | base64)
 
         echo "::set-output name=changelog::$changelog"
