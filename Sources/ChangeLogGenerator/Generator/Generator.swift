@@ -38,6 +38,8 @@ public struct Generator {
         self.maximumNumberOfPages = maximumNumberOfPages
         self.nextTag = nextTag
         self.includeUntagged = includeUntagged
+        
+        Logger.log(level: .verbose, "generator \(self)")
     }
     
     // MARK: Methods
@@ -232,6 +234,7 @@ public struct Generator {
             shouldFilterOut = shouldFilterOut || pullRequest.labels.contains { excludedLabels.contains($0.name) }
 
             if shouldFilterOut == false {
+                Logger.log(level: .verbose, "Adding PR with labels \(pullRequest.labels.map({ $0.name }))")
                 entry.pullRequests.append(pullRequest)
             }
         }
