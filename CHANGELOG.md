@@ -1,4 +1,10 @@
 
+# v4.4.0
+
+- [#6](https://github.com/scoremedia/changelog-generator/pull/6): IPFM-1484: Update actions by [maksbond23](https://github.com/maksbond23)
+- [#5](https://github.com/scoremedia/changelog-generator/pull/5): IPFM-1355: Align versions of actions with other repos by [maksbond23](https://github.com/maksbond23)
+
+
 # v4.3.5
 
 - [#65](https://github.com/tahirmt/changelog-generator/pull/65): Move the fetch log to verbose by [tahirmt](https://github.com/tahirmt)
