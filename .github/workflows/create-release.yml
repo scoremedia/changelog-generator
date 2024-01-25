@@ -10,7 +10,7 @@ jobs:
     if: github.event.pull_request.merged == true && github.head_ref == 'create-release'
 
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     
     - name: Get app version
       id: get-version
@@ -20,7 +20,7 @@ jobs:
         title="${{ github.event.pull_request.title }}"
         tag="${title:15}"
 
-        echo "::set-output name=tag::$tag"
+        echo "tag=$tag" >> $GITHUB_OUTPUT
 
     - name: Update tag
       uses: scoremedia/update-tag@v2
@@ -48,7 +48,7 @@ jobs:
         echo $output >> $GITHUB_ENV
         echo 'EOF' >> $GITHUB_ENV
 
-        echo "::set-output name=changelog::$output"
+        echo "changelog=$output" >> $GITHUB_OUTPUT
 
     - name: Create Release
       id: create_release
