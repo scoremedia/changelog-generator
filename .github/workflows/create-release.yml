@@ -10,7 +10,7 @@ jobs:
     if: github.event.pull_request.merged == true && github.head_ref == 'create-release'
 
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     
     - name: Get app version
       id: get-version
