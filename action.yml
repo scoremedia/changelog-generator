@@ -188,7 +188,7 @@ runs:
 
     - name: Set output
       id: set-output
-      uses: actions/github-script@v6
+      uses: actions/github-script@v7
       with:
         script: |
           const { CHANGELOG_GENERATED_VALUE } = process.env
