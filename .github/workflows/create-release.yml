@@ -23,7 +23,7 @@ jobs:
         echo "tag=$tag" >> $GITHUB_OUTPUT
 
     - name: Update tag
-      uses: scoremedia/update-tag@v2
+      uses: richardsimko/update-tag@v1
       with:
         tag_name: "${{ steps.get-version.outputs.tag }}"
       env:
